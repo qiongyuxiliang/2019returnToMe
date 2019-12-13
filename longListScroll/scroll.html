@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    li{
+        display: block;
+        height: 30px;
+        line-height: 30px;
+
+    }
+    #container{
+        overflow-y: scroll;
+        overflow-x:hidden;
+    }
+    #fix{
+       position: relative;
+      
+    }
+    </style>
+</head>
+<body>
+       <div  style="height:300px;width:600px;margin: 0 auto;border: 1px saddlebrown solid;position: relative;margin-top: 300px;" id = 'container'>
+        
+        <ul id="ul" style="position: absolute;overflow: hidden;margin: 0；"></ul>
+        <div id ="fix" style="height: 30px;">加载中....</div>
+       </div>
+</body>
+<script src="data.js"> </script>
+<script src="scrollLongList.js"></script>
+</html>
