@@ -232,3 +232,32 @@ Array.prototype.filter = function(func, thisArg) {
     res.length = c; // shrink down array to proper size
     return res;
   };
+
+/*字符串匹配*/
+/**
+ * @param {string} s
+ * @return {boolean}
+ */
+var isValid = function(s) {
+	var stack = []
+	var map = {
+		'(' : ')',
+		'[': ']',
+		'{': '}'
+	}
+
+	for (var char of s) {
+		if(char in map) {
+			stack.push(char)
+		} else {
+			if( !stack.length || char != map[stack.pop()]) {
+				return false
+			}
+		}
+	}
+
+	// 如果最后stack 里没有元素了， 就一定是匹配的
+	return !stack.length
+};
+
+isValid("{()}")
